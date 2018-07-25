@@ -43,7 +43,7 @@ export abstract class Shape {
         const startY: number = this.getTop();
         const xDistanceToMove: number = x - this.getLeft();
         const yDistanceToMove: number = y - this.getTop();
-        const animation: Konva.Animation = new Konva.Animation((frame) =>{
+        const animation: Konva.Animation = new Konva.Animation((frame: any) =>{
             const percentage: number = frame.time /durationInMilliseconds;
             const newX: number = startX + xDistanceToMove * percentage;
             const newY: number = startY + yDistanceToMove * percentage;
